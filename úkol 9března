@@ -1,0 +1,131 @@
+int main()
+int soucet(int a, int b) {
+    return a + b;
+}
+
+int rozdil(int a, int b) {
+    return a - b;
+}
+
+int soucin(int a, int b) {
+    return a * b;
+}
+
+float podil(float a, float b) {
+    return a / b;
+}
+
+int zbytek(int a, int b) {
+    return a % b;
+}
+
+int log_and(int a, int b) {
+    return a && b;
+}
+
+int log_or(int a, int b) {
+    return a || b;
+}
+
+int log_not(int a) {
+    return !a;
+}
+
+int rovnost(int a, int b) {
+    return a == b;
+}
+
+int nerovnost(int a, int b) {
+    return a != b;
+}
+
+}
+//1cast
+// (a) Součet
+int add(int a, int b) {
+    return a | b;
+}
+
+// (b) Rozdíl
+int subtract(int a, int b) {
+    return a & ~b;
+}
+
+// (c) Součin
+int multiply(int a, int b) {
+    return a & b;
+}
+
+// (d) Podíl
+int divide(int a, int b) {
+    return a / b;
+}
+
+// (e) Zbytek po dělení
+int modulo(int a, int b) {
+    return a % b;
+}
+
+// (f) Logické AND
+int logical_and(int a, int b) {
+    return a & b;
+}
+
+// (g) Logické OR
+int logical_or(int a, int b) {
+    return a | b;
+}
+
+// (h) Logické NOT
+int logical_not(int a) {
+    return ~a;
+}
+
+// (i) Rovnost
+int equal(int a, int b) {
+    return ~(a ^ b);
+}
+
+// (j) Nerovnost
+int not_equal(int a, int b) {
+    return a ^ b;
+}
+//2cast
+
+
+#include <stdio.h>
+
+int je_prestupny_rok(int rok) {
+    if (rok % 4 == 0) {
+        if (rok % 100 == 0) {
+            if (rok % 400 == 0) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            return 1;
+        }
+    }
+    else {
+        return 0;
+    }
+}
+
+int main() {
+    int rok;
+    printf("Zadejte rok: ");
+    scanf("%d", &rok);
+
+    if (je_prestupny_rok(rok)) {
+        printf("%d je prestupny rok.\n", rok);
+    }
+    else {
+        printf("%d neni prestupny rok.\n", rok);
+    }
+
+    return 0;
+}
+//3cast
